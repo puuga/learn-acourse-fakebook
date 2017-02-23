@@ -10,6 +10,17 @@
 
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
+      <form class="" action="{{ route('profile_upload_picture') }}"
+        method="post" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <input type="file" name="profile_picture" accept="image/*">
+        <input type="submit">
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
       @include('timeline.component.view_create_timeline_form')
     </div>
   </div>
